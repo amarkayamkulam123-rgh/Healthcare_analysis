@@ -1,6 +1,7 @@
 # Healthcare BI Dashboard
 
-An interactive, premium Healthcare Business Intelligence dashboard built with vanilla HTML, CSS, and JavaScript. Visualizes 50,000+ patient records across 4 analytical pages.
+An interactive, premium Healthcare Business Intelligence dashboard visualizing 50,000+ patient records across 4 analytical pages. 
+This project features a fully functional **Power BI** dashboard embedded directly into a GitHub Pages site for seamless web access.
 
 ## 🔗 Live Dashboard
 
@@ -17,60 +18,30 @@ An interactive, premium Healthcare Business Intelligence dashboard built with va
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML5, CSS3, Vanilla JavaScript
-- **Charts**: Chart.js 4.x
-- **Design**: Custom dark premium theme (glassmorphism, micro-animations)
 - **Data Processing**: Python (Pandas, NumPy)
-- **Hosting**: GitHub Pages
+- **Visualization**: Microsoft Power BI (`.pbix`)
+- **Hosting**: GitHub Pages (via Power BI embedded `<iframe>`)
 
 ## 📁 Project Structure
 
 ```
-Healthcare_bi/
-├── docs/                       # Web dashboard (GitHub Pages)
-│   ├── index.html              # Main HTML
-│   ├── style.css               # Premium dark theme
-│   ├── dashboard.js            # Chart.js engine
-│   ├── dashboard_data.json     # Preprocessed aggregated data
-│   └── preprocess_data.py      # Data aggregation script
-├── healthcare_data.csv         # Cleaned dataset (50K records)
+Healthcare_analysis/
+├── docs/                       # Web deployment folder (GitHub Pages)
+│   └── index.html              # Wrapper HTML embedding the Power BI dashboard
 ├── healthcare_dataset.csv      # Original raw dataset
-├── clean_healthcare_data.py    # Data cleaning pipeline
-├── cleaning_report.txt         # Cleaning results log
-├── healthcare.pbix             # Power BI file
-├── Healthcare_Premium_Theme.json  # Power BI theme
-└── PowerBI_Dashboard_Guide.md  # Visual-by-visual guide
+├── clean_healthcare_data.py    # Python data cleaning pipeline
+├── healthcare_data.csv         # Cleaned dataset used in Power BI (50K records)
+├── cleaning_report.txt         # Log of cleaning actions and results
+├── healthcare.pbix             # Core Power BI dashboard file
+├── Healthcare_Premium_Theme.json  # Custom Power BI dark theme config
+└── PowerBI_Dashboard_Guide.md  # Detailed visual-by-visual construction guide
 ```
 
-## 🚀 Local Development
+## 🚀 How It Was Built
 
-1. Clone the repository
-2. Run the data preprocessor (requires Python 3 + pandas):
-   ```bash
-   cd docs
-   python preprocess_data.py
-   ```
-3. Serve locally:
-   ```bash
-   python -m http.server 8000 --directory docs
-   ```
-4. Open `http://localhost:8000`
-
-## 📈 Data Pipeline
-
-1. **Raw Data** → `healthcare_dataset.csv` (original)
-2. **Cleaning** → `clean_healthcare_data.py` → `healthcare_data.csv`
-3. **Aggregation** → `preprocess_data.py` → `dashboard_data.json` (6.5 KB)
-4. **Visualization** → Interactive web dashboard
-
-## 🎨 Design
-
-The dashboard uses a premium dark theme inspired by the Healthcare Premium Theme with:
-- Dark navy backgrounds (`#0B1929`, `#0F2237`)
-- Teal accent (`#00BFA5`) with vibrant chart palette
-- Glassmorphism headers with backdrop blur
-- Animated KPI counters
-- Responsive layout (desktop → tablet → mobile)
+1. **Data Cleaning**: The raw `healthcare_dataset.csv` was processed using `clean_healthcare_data.py` to fix casing, remove duplicates, handle missing values, and calculate new fields (like Length of Stay).
+2. **Dashboard Creation**: The cleaned `healthcare_data.csv` was loaded into Power BI (`healthcare.pbix`), utilizing a custom premium dark theme (`Healthcare_Premium_Theme.json`).
+3. **Web Deployment**: The final Power BI dashboard was published to the web, and the public embed URL was placed inside `docs/index.html` to be hosted seamlessly via GitHub Pages.
 
 ## 📄 License
 
