@@ -4,7 +4,7 @@ An interactive, premium Healthcare Business Intelligence dashboard built with va
 
 ## 🔗 Live Dashboard
 
-👉 **[View Live Dashboard](https://amarkayamkulam123-rgh.github.io/Healthcare_bi/dashboard/)**
+👉 **[View Live Dashboard](https://amarkayamkulam123-rgh.github.io/Healthcare_analysis/dashboard/)**
 
 ## 📊 Dashboard Pages
 
