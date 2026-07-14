@@ -4,7 +4,7 @@ An interactive, premium Healthcare Business Intelligence dashboard built with va
 
 ## 🔗 Live Dashboard
 
-👉 **[View Live Dashboard](https://amarkayamkulam123-rgh.github.io/Healthcare_analysis/dashboard/)**
+👉 **[View Live Dashboard](https://amarkayamkulam123-rgh.github.io/Healthcare_analysis/)**
 
 ## 📊 Dashboard Pages
 
@@ -27,7 +27,7 @@ An interactive, premium Healthcare Business Intelligence dashboard built with va
 
 ```
 Healthcare_bi/
-├── dashboard/                  # Web dashboard (GitHub Pages)
+├── docs/                       # Web dashboard (GitHub Pages)
 │   ├── index.html              # Main HTML
 │   ├── style.css               # Premium dark theme
 │   ├── dashboard.js            # Chart.js engine
@@ -47,12 +47,12 @@ Healthcare_bi/
 1. Clone the repository
 2. Run the data preprocessor (requires Python 3 + pandas):
    ```bash
-   cd dashboard
+   cd docs
    python preprocess_data.py
    ```
 3. Serve locally:
    ```bash
-   python -m http.server 8000 --directory dashboard
+   python -m http.server 8000 --directory docs
    ```
 4. Open `http://localhost:8000`
 
