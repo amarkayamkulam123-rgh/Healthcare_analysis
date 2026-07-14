@@ -3,55 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Analytics Dashboard | Power BI</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            background-color: #0B1929; /* Matches premium dark theme */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #E0E7EF;
-        }
-        .header {
-            background-color: #0F2237;
-            padding: 15px 24px;
-            border-bottom: 1px solid #1A3A5C;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        .iframe-container {
-            width: 100%;
-            height: calc(100% - 60px); /* Adjust for header height */
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <title>Healthcare Analytics Dashboard</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Healthcare Business Intelligence Dashboard</h1>
-        <span style="font-size: 0.85rem; color: #8FA3B8;">Powered by Power BI</span>
-    </div>
-    
-    <div class="iframe-container">
-        <!-- Power BI Embed Iframe -->
-        <iframe 
-            title="Healthcare Analytics Dashboard" 
-            src="https://app.powerbi.com/view?r=eyJrIjoiNWJmYTY4ZjQtMjU2MC00YTlkLThmMTUtNTg2MDY2MmQ0NTk1IiwidCI6ImUzODZiYjZhLTIzZDEtNGRiMy1hNTcxLTlhZGZiZmJhNDc5NiJ9" 
-            allowFullScreen="true">
-        </iframe>
-    </div>
+    <!-- Background Glows -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+                Healthcare BI
+            </a>
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#methodology">Methodology</a>
+                <a href="https://github.com/amarkayamkulam123-rgh/Healthcare_analysis" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero container fade-up">
+        <h1>Intelligent <span class="text-gradient">Healthcare Data</span> Analysis</h1>
+        <p>A comprehensive Business Intelligence dashboard analyzing 50,000+ patient records across 39,000 hospitals, built to uncover clinical, demographic, and financial insights.</p>
+        <div class="hero-btns">
+            <a href="#dashboard" class="btn btn-primary"><i class="fas fa-chart-pie"></i> Explore Dashboard</a>
+            <a href="#methodology" class="btn btn-secondary">How it works <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container fade-up">
+            <div class="dashboard-header">
+                <div>
+                    <h2>Interactive Dashboard</h2>
+                    <span style="color: var(--text-muted);">Navigate through 4 detailed analytical pages.</span>
+                </div>
+            </div>
+            
+            <div class="glass-container" id="dashboard-container">
+                <button class="btn-fullscreen" id="btn-fullscreen">
+                    <i class="fas fa-expand"></i> Fullscreen
+                </button>
+                <div class="iframe-wrapper">
+                    <!-- Power BI Embed Iframe -->
+                    <iframe 
+                        title="Healthcare Analytics Dashboard" 
+                        src="https://app.powerbi.com/view?r=eyJrIjoiNWJmYTY4ZjQtMjU2MC00YTlkLThmMTUtNTg2MDY2MmQ0NTk1IiwidCI6ImUzODZiYjZhLTIzZDEtNGRiMy1hNTcxLTlhZGZiZmJhNDc5NiJ9" 
+                        allowFullScreen="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Section -->
+    <section id="methodology" class="details-section container">
+        <div class="fade-up">
+            <h2 style="text-align: center;">Project Methodology</h2>
+            <p style="text-align: center;">From raw, messy datasets to actionable Power BI insights.</p>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card fade-up">
+                <div class="metric-icon"><i class="fab fa-python"></i></div>
+                <div class="metric-value">50,000+</div>
+                <div class="metric-label">Records Cleaned with Pandas</div>
+            </div>
+            <div class="metric-card fade-up" style="transition-delay: 100ms;">
+                <div class="metric-icon"><i class="fas fa-hospital"></i></div>
+                <div class="metric-value">39,874</div>
+                <div class="metric-label">Hospitals Analyzed</div>
+            </div>
+            <div class="metric-card fade-up" style="transition-delay: 200ms;">
+                <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="metric-value">4 Pages</div>
+                <div class="metric-label">Of Interactive BI Reports</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Healthcare Business Intelligence. Built with <i class="fas fa-heart" style="color: var(--accent-pink);"></i> and Power BI.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                <a href="https://github.com/amarkayamkulam123-rgh/Healthcare_analysis" target="_blank" style="color: var(--accent-teal); text-decoration: none;">View Source Code on GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
